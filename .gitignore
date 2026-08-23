@@ -1,0 +1,10 @@
+
+/geo-backend/.env
+/geo-backend/vendor
+/geo-backend/.phpunit.result.cache
+/geo-backend/database/*.sqlite
+/geo-backend/bootstrap/cache/*.php
+/geo-frontend/node_modules
+/geo-frontend/.next
+.DS_Store
+*.log

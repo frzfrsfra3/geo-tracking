@@ -60,7 +60,7 @@ geo-tracking/
 
 - Docker & Docker Compose
 - Node.js ≥ 18 (for the fake-data simulator only)
-- Mapbox public access token ([Get one free](https://account.mapbox.com/))
+- Mapbox public access token
 
 ---
 
@@ -72,8 +72,9 @@ geo-tracking/
 git clone https://github.com/frzfrsfra3/geo-tracking.git
 cd geo-tracking
 ```
+### 2. Add MAPBOX TOKEN SECRET TO docker-compose file   NEXT_PUBLIC_MAPBOX_TOKEN: yourmapboxsecret
 
-### 2. Start Infrastructure (Docker)
+### 3. Start Infrastructure (Docker)
 
 ```bash
 docker-compose up -d --build
@@ -81,21 +82,9 @@ docker-compose up -d --build
 
 > This spins up: `postgres`, `redis`, `laravel-app`, `reverb-server`, and `nextjs-app`.
 
-### 3. Run Laravel Migrations
+### 4. Open the Map
 
-```bash
-docker exec -it laravel-app php artisan migrate
-```
-
-### 4. Start the Fake Data Simulator
-
-```bash
-node fake.js
-```
-
-### 5. Open the Map
-
-Navigate to `http://localhost:3000` — markers will appear and move in real-time.
+Navigate to `http://localhost:3001` — markers will appear and move in real-time.
 
 ---
 

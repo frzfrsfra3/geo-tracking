@@ -69,7 +69,7 @@ geo-tracking/
 ### 1. Clone & Environment
 
 ```bash
-git clone [<repo-url>](https://github.com/frzfrsfra3/geo-tracking.git)
+git clone https://github.com/frzfrsfra3/geo-tracking.git
 cd geo-tracking
 ```
 

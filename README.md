@@ -7,17 +7,17 @@
 ## 📐 System Architecture
 
 ```
-┌─────────────┐     HTTP POST      ┌─────────────────┐     WebSocket      ┌─────────────────┐
-│   fake.js   │ ─────────────────> │  Laravel API    │ ─────────────────> │  Next.js Client │
-│  (Simulator)│  /api/driver-location│  (Reverb WS)  │  driver-locations│  (Mapbox Map)   │
-└─────────────┘                    └─────────────────┘                    └─────────────────┘
+┌─────────────┐     HTTP POST        ┌─────────────────┐     WebSocket      ┌─────────────────┐
+│   fake.js   │ ─────────────────>   │  Laravel API    │ ─────────────────> │  Next.js Client │
+│  (Simulator)│  /api/driver-location│  (Reverb WS)    │  driver-locations  │  (Mapbox Map)   │
+└─────────────┘                      └─────────────────┘                    └─────────────────┘
                                          │
                                          │ INSERT
                                          ▼
-                              ┌─────────────────────┐
-                              │  PostgreSQL + PostGIS│
-                              │   driver_reports     │
-                              └─────────────────────┘
+                              ┌ ───────────────────── ┐
+                              │  PostgreSQL + PostGIS │
+                              │   driver_reports      │
+                              └ ───────────────────── ┘
 ```
 
 ---
